@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session, sessionmaker
 from data.tea_data import teas_list, comments_list
+from data.user_data import user_list
 from config.environment import db_URI
 from sqlalchemy import create_engine
 from models.base import Base
@@ -23,6 +24,11 @@ try:
     # Seed comments after teas
     db.add_all(comments_list)
     db.commit()
+
+    # Seed users after teas
+    db.add_all(user_list)
+    db.commit()
+
     db.close()
 
     print("Database seeding complete! 👋")
