@@ -1,2 +1,2 @@
-config/environment.py
+.env
 .pytest_cache
