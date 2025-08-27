@@ -1,5 +1,3 @@
-# data/tea_data.py
-
 from models.tea import TeaModel
 from models.comment import CommentModel
 

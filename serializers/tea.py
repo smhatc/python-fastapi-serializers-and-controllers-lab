@@ -16,3 +16,8 @@ class TeaSchema(BaseModel):
 
   class Config:
     orm_mode = True
+
+class TeaCreateSchema(BaseModel):
+  name: str
+  in_stock: bool
+  rating: int
